@@ -24,6 +24,9 @@ class ProductController extends Controller
             'category_id' => 'required|exists:categories,id',
         ]);
 
+        // abort_unless(auth()->user()->can(abilities: 'products.create'), 403);
+        abort_unless(request()->user()->can(abilities: 'products.create'), 403);
+
         $product = Product::create($validated);
         return response()->json($product, 201);
     }

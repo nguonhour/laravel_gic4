@@ -4,7 +4,6 @@ namespace App\Http\Controllers;
 
 use App\Models\Categories;
 use Illuminate\Http\Request;
-
 class CategoriesController extends Controller
 {
     // Get all categories
@@ -21,6 +20,10 @@ class CategoriesController extends Controller
             'name' => 'required|string|max:255',
             'description' => 'nullable|string',
         ]);
+
+        // abort_unless(auth()->user()->can('categories.create'), 403);
+        abort_unless(request()->user()->can(abilities: 'categories.create'), 403);
+
 
         $category = Categories::create($validated);
         return response()->json($category, 201);
