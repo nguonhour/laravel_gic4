@@ -7,6 +7,10 @@ use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Gate;
 use App\Models\Categories;
+use App\Http\Controllers\AuthorController;
+use App\Http\Controllers\ArticleController;
+use App\Http\Controllers\AudienceController;
+use App\Http\Controllers\CommentController;
 
 // Force JSON responses for all API routes
 Route::middleware('api')->group(function () {
@@ -49,6 +53,30 @@ Route::middleware('auth:api')->group(function () {
     Route::get('/products/{productId}', [ProductController::class, 'show']);
     Route::patch('/products/{productId}', [ProductController::class, 'update']);
     Route::delete('/products/{productId}', [ProductController::class, 'destroy']);
+
+    // Teacher exercise routes: authors, articles, audiences, comments
+    Route::get('/authors', [AuthorController::class, 'index']);
+    Route::post('/authors', [AuthorController::class, 'store']);
+    Route::get('/authors/{author}', [AuthorController::class, 'show']);
+    Route::patch('/authors/{author}', [AuthorController::class, 'update']);
+    Route::delete('/authors/{author}', [AuthorController::class, 'destroy']);
+
+    Route::get('/articles', [ArticleController::class, 'index']);
+    Route::post('/articles', [ArticleController::class, 'store']);
+    Route::get('/articles/{article}', [ArticleController::class, 'show']);
+    Route::patch('/articles/{article}', [ArticleController::class, 'update']);
+    Route::delete('/articles/{article}', [ArticleController::class, 'destroy']);
+
+    Route::get('/audiences', [AudienceController::class, 'index']);
+    Route::post('/audiences', [AudienceController::class, 'store']);
+    Route::get('/audiences/{audience}', [AudienceController::class, 'show']);
+    Route::delete('/audiences/{audience}', [AudienceController::class, 'destroy']);
+
+    Route::get('/comments', [CommentController::class, 'index']);
+    Route::post('/comments', [CommentController::class, 'store']);
+    Route::get('/comments/{comment}', [CommentController::class, 'show']);
+    Route::patch('/comments/{comment}', [CommentController::class, 'update']);
+    Route::delete('/comments/{comment}', [CommentController::class, 'destroy']);
 
     // PATCH /api/categories/{id}/status → assigned staff only (policy)
     Route::patch('/categories/{category}/status', function (Request $request, Categories $category) {

@@ -1,0 +1,72 @@
+[
+  {
+    "id": 1,
+    "name": "Classic Cotton T-Shirt",
+    "description": "Soft, breathable cotton tee in multiple colors.",
+    "price": 19.99,
+    "category_id": 1
+  },
+  {
+    "id": 2,
+    "name": "Slim Fit Jeans",
+    "description": "Dark-wash slim fit jeans with stretch for comfort.",
+    "price": 49.5,
+    "category_id": 1
+  },
+  {
+    "id": 3,
+    "name": "Wireless Bluetooth Headphones",
+    "description": "Over-ear headphones with noise cancellation and 20h battery.",
+    "price": 89.99,
+    "category_id": 2
+  },
+  {
+    "id": 4,
+    "name": "Portable Power Bank 10000mAh",
+    "description": "Compact power bank with dual USB outputs.",
+    "price": 25.0,
+    "category_id": 2
+  },
+  {
+    "id": 5,
+    "name": "Stainless Steel Water Bottle 750ml",
+    "description": "Insulated bottle keeps drinks cold for 24 hours.",
+    "price": 22.0,
+    "category_id": 3
+  },
+  {
+    "id": 6,
+    "name": "Yoga Mat - Non Slip",
+    "description": "Eco-friendly, 6mm thick yoga mat for home workouts.",
+    "price": 29.99,
+    "category_id": 3
+  },
+  {
+    "id": 7,
+    "name": "Ceramic Coffee Mug",
+    "description": "350ml mug with matte finish and ergonomic handle.",
+    "price": 12.5,
+    "category_id": 3
+  },
+  {
+    "id": 8,
+    "name": "Running Shoes - Lightweight",
+    "description": "Breathable running shoes with cushioned sole.",
+    "price": 74.99,
+    "category_id": 1
+  },
+  {
+    "id": 9,
+    "name": "USB-C Fast Charger 30W",
+    "description": "Compact wall charger with PD fast-charging support.",
+    "price": 18.75,
+    "category_id": 2
+  },
+  {
+    "id": 10,
+    "name": "Leather Card Wallet",
+    "description": "Slim wallet holds up to 8 cards and cash.",
+    "price": 34.0,
+    "category_id": 1
+  }
+]
